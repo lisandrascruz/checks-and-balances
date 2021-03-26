@@ -1,0 +1,221 @@
+/* Global =============== */
+:root {
+    --grey-background: #f0f2f5;
+    --grey-text: #7F7F7F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+    height: 100%;
+}
+
+header {
+    padding: 3rem 0;
+    text-align: center;
+    background: var(--grey-background);
+    height: 12rem;
+}
+
+header small {
+    color: var(--grey-text);
+}
+
+body {
+    font-family: "Poppins", "sans-serif";
+    height: 100%;
+}
+
+main {
+    width: min(90vw, 900px);
+    margin: auto;
+}
+
+.area {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.sr-only {
+    /* Trick CSS para deixar invisivel e nao
+    afetar a acessibilidade */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Card and Form ============== */
+.card {
+
+    border-radius: 0.25rem;
+    margin: 3rem 0;
+}
+
+.card h3 {
+    padding: 1.5rem 0;
+    font-weight: normal;
+    color: var(--grey-text);
+    text-align: center;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card:first-child {
+    padding: 0 2rem;
+    border: grey 1px solid;
+    border-radius: 0;
+    height: fit-content;
+}
+
+.card .input-value {
+    padding: 2rem 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .input-data {
+    border: grey 1px solid;
+    width: 100%;
+}
+
+input,
+img {
+    border-radius: .1rem;
+    padding: 0.8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+button::-webkit-outer-spin-button,
+button::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.card .input-description {
+    padding: 2rem 0 0;
+}
+
+.card .input-options {
+    margin: 3rem 0;
+}
+
+.card .input-options .option {
+    margin: 1rem 0;
+}
+
+.option {
+    color: var(--grey-text);
+}
+
+.card .button-register {
+    padding: 0.5rem 2rem;
+    background: white;
+    border: grey 1px solid;
+    margin: 0 0 3rem;
+}
+
+.card .filters-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+.card .filters-date,
+.element-date {
+    display: flex;
+}
+
+.card .filters-date .date {
+    padding: 0.8rem 0;
+}
+
+.card .filters-date .date .label-date {
+    font-size: 0.6em;
+}
+
+.card .filters-date .date .input-date {
+    font-size: 1em;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.card .results-filter {
+    background: var(--grey-background);
+    height: 30rem;
+    padding: 1rem 1rem;
+    overflow: auto;
+}
+
+.card .results-filter p {
+    margin: 0;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: normal;
+    justify-content: flex-start;
+}
+
+.card .results-filter input {
+    padding: 0 0.5rem 0 0;
+}
+
+.results-filter {
+    color: var(--grey-text);
+    font-size: 0.8rem;
+}
+
+/* Footer ============== */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    background: var(--grey-background);
+    height: fit-content;
+}
+
+/* Responsive ============== */
+@media (min-width: 915px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

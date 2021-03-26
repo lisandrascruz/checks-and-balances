@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>[Lisandra Cruz] nos.codamos</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Checks and Balances</h1>
+        <small>Your current balance is <span id="balance">R$ 0,00</span></small>
+    </header>
+
+    <main>
+        <section class="area">
+
+            <div class="card">
+                <h3>NEW TRANSACTION</h2>
+
+                    <form action="" onsubmit="Form.submit(event)">
+                        <div class="input-value">
+                            <label class="sr-only" for="value">Valor</label>
+                            <img src="./assets/icons/minus-circle.svg" onclick="DOM.decrementValue()"
+                                alt="Deduct R$ 1,00 at total value">
+
+                            <input type="currency" id="value" class="input-data" name="value" placeholder="R$ 0,00" />
+
+                            <img src="./assets/icons/plus-circle.svg" onclick="DOM.incrementValue()"
+                                alt="Sum R$ 1,00 at total value" />
+                        </div>
+
+                        <div class="input-description">
+                            <label class="sr-only" for="value">Insert description</label>
+                            <input type="text" class="input-data" id="description" name="description"
+                                placeholder="Input description" />
+                        </div>
+
+                        <div class="input-options">
+                            <label class="sr-only" for="value">Select option</label>
+
+                            <form action="">
+                                <div class="option">
+                                    <input type="radio" name="option-add" value="DEPOSITO">
+                                    <a>Deposit<a></a><br>
+                                </div>
+
+                                <div class="option">
+                                    <input type="radio" name="option-add" value="SAQUE">
+                                    <a>Withdrawals</a>
+                                </div>
+                            </form>
+                        </div>
+                        <button href="#" onclick="TransactionService.add()" type="submit" class="button-register">
+                            <small><b>REGISTER</b></small></button>
+                    </form>
+            </div>
+
+            <div class="card">
+                <h2 class="sr-only">Transactions</h2>
+
+                <div class="filters-input">
+                    <div>
+                        <label class="sr-only" for="value">Insert description</label>
+                        <input type="text" class="input-data" id="description-filter" name="description"
+                            placeholder="Input description" oninput="DOM.filterTransactions()" />
+                    </div>
+
+                    <div>
+                        <label class="sr-only" for="value">Select option</label>
+
+                        <form action="" id="form-option-filter" oninput="DOM.filterTransactions()">
+                            <div class="option">
+                                <input name="option-filter" type="checkbox" value="DEPOSITO-FILTER">
+                                <a>Deposit </a>
+                                </input>
+
+                                <input name="option-filter" type="checkbox" value="SAQUE-FILTER">
+                                <a>Withdrawals</a>
+                                </input>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="filters-date">
+                    <div class="element-date">
+                        <input type="image" src="./assets/icons/calendar.svg" alt="Input start date">
+
+                        <div class="date">
+                            <small class="label-date"><b>Start date<br></b></small>
+                            <small>
+                                <input class="input-date" id="start-date" type="date">
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="element-date">
+                        <input type="image" src="./assets/icons/calendar.svg" alt="Input end date">
+
+                        <div class="date">
+                            <small class="label-date"><b>End date<br></b></small>
+                            <small>
+                                <input class="input-date" id="end-date" type="date">
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="results-filter">
+                    <small class="alert-message"> If we do not find the filtered element, the entire list will be
+                        returned.</small>
+
+                    <table id="data-table">
+                        <tbody> </tbody>
+                    </table>
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>Lisandra Cruz</p>
+        <small>lisansouza@gmail.com</small>
+    </footer>
+
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+
+</html>

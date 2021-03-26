@@ -1,0 +1,17 @@
+{
+  "name": "chacks-and-balances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "Lisandra Cruz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "feather-icons": "^4.28.0"
+  }
+}
